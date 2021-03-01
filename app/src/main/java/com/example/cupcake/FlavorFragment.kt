@@ -52,7 +52,11 @@ class FlavorFragment : Fragment() {
             lifecycleOwner = viewLifecycleOwner
             // sharedViewModelを適用
             viewModel = sharedViewModel
-            nextButton.setOnClickListener { goToNextScreen() }
+            // listener binding
+//            nextButton.setOnClickListener { goToNextScreen() }
+            // inside the binding?.apply block, the keyword this refers
+            // to the binding instance, not the fragment instance
+            flavorFragment = this@FlavorFragment
         }
     }
 

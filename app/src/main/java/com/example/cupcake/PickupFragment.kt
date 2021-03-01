@@ -52,7 +52,8 @@ class PickupFragment : Fragment() {
             // set a lifeCycleOwner to observe LiveData object
             lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
-            nextButton.setOnClickListener { goToNextScreen() }
+//            nextButton.setOnClickListener { goToNextScreen() }
+            pickupFragment = this@PickupFragment
         }
     }
 
