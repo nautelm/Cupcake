@@ -49,6 +49,8 @@ class PickupFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding?.apply {
+            // set a lifeCycleOwner to observe LiveData object
+            lifecycleOwner = viewLifecycleOwner
             viewModel = sharedViewModel
             nextButton.setOnClickListener { goToNextScreen() }
         }
